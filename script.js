@@ -2,7 +2,7 @@
 const steps = [
     {
         heading: "Scene 1: The Cafeteria Meet-Cute",
-        bgImage: "images/her1.jpg", 
+        bgImage: "her1.jpg", 
         options: [
             "Sweet Iced Latte (with lingering eye contact)", 
             "Spiced Chai (with undeniable chemistry)"
@@ -10,7 +10,7 @@ const steps = [
     },
     {
         heading: "Scene 2: The Study Session Plot-Twist",
-        bgImage: "images/her2.jpg",
+        bgImage: "her2.jpg",
         options: [
             "Sharing headphones in a quiet library corner", 
             "Sneaking up to the campus rooftop after hours"
@@ -18,7 +18,7 @@ const steps = [
     },
     {
         heading: "Scene 3: The Bold Move",
-        bgImage: "images/her3.jpg",
+        bgImage: "her3.jpg",
         options: [
             "An 'accidental' hand brush while walking", 
             "Directly stealing a sip of my drink to be a menace"
@@ -64,7 +64,7 @@ function handleChoice(choice) {
 
 function showFinalVibe() {
     // Switch to the final background image
-    document.getElementById("bgContainer").style.backgroundImage = "url('images/her1.jpg')";
+    document.getElementById("bgContainer").style.backgroundImage = "url('her1.jpg')";
     
     document.getElementById("menu-title").innerText = "Season Finale Locked!";
     document.getElementById("menu-subtitle").innerText = "Your College Drama Synopsis";
