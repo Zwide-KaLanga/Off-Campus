@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Gives it an aesthetic café menu vibe */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+
+/* Smooth shifting full-screen background */
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/her1.jpg'); /* Initial photo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.7);
+    z-index: -1;
+    transition: background-image 0.8s ease-in-out;
+}
+
+/* Elegant Boutique Menu Look */
+.menu-card {
+    /* translucent card without blurring the background image */
+    background: linear-gradient(rgba(10,10,10,0.45), rgba(10,10,10,0.45));
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3rem 2rem;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 460px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.menu-header .est {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #b3a296;
+}
+
+#menu-title {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0.5rem 0;
+}
+
+#menu-subtitle {
+    font-size: 0.85rem;
+    color: #cccccc;
+    font-style: italic;
+}
+
+.divider {
+    height: 1px;
+    width: 60%;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 1.5rem auto;
+}
+
+#section-heading {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #e6dfd9;
+}
+
+/* Stacked menu options */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.menu-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    padding: 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-btn:hover {
+    border-style: solid;
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 1.8rem; /* Subtle elegant shift on hover */
+}
+
+/* Final Receipt Display style */
+.receipt {
+    text-align: left;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-left: 2px solid #b3a296;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+        padding: 2rem 0;
+    }
+
+    .menu-card {
+        padding: 1.6rem 1rem;
+        width: 94%;
+        max-width: none;
+        border-radius: 4px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    #menu-title {
+        font-size: 1.6rem;
+    }
+
+    #menu-subtitle {
+        font-size: 0.9rem;
+    }
+
+    #section-heading {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .menu-btn {
+        padding: 1rem;
+        font-size: 1rem;
+        border-width: 1px;
+        justify-content: center;
+    }
+
+    .receipt {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+}
